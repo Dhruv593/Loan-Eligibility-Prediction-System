@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<h1>hello</h1>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Feedback</h5>
+      <form method="POST" action="">
+        {% csrf_token %}
+        
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Enter Your Name" name="name"/>
+        </div>
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Enter Your Email" name="email"/>
+        </div>
+        <div class="input-group mb-3">
+          <input type="tel" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Enter Your Mobile Number" name="mobile"/>
+        </div>
+        <div class="input-group mb-3">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name ="feedback"></textarea>
+        </div>
+      
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      
+    </div>
+</div>
+
+{% endblock %}

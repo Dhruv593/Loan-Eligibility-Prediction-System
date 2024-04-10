@@ -1,0 +1,146 @@
+{% extends 'main.html' %} {% block content %}
+
+<h4>Check Loan Eligibility Here</h4>
+<form method="POST" action="result">
+  {% csrf_token %}
+
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+      placeholder="Enter Your Name"
+      name="name"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+      placeholder="Gender (Male: 1, Female: 0)"
+      name="gender"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+      placeholder="Marital status (Married: 1, Unmarried: 0)"
+      name="married"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+      placeholder="Dependents (1, 2 ...)"
+      name="dependents"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+      placeholder="Education"
+      name="education"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+      placeholder="Self Employed"
+      name="selfEmployed"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+      placeholder="Applicant Income"
+      name="applicantIncome"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+      placeholder="Co-applicant Income"
+      name="coapplicantIncome"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+      placeholder="Loan Amount"
+      name="loanAmount"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+      placeholder="Loan Amount Term"
+      name="loanAmountTeam"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+      placeholder="Credit History"
+      name="creditHistory"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="basic-url"
+      aria-describedby="basic-addon3"
+      placeholder="Property Area"
+      name="propertyArea"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+
+<div class="result">
+  <h3>Result : {{result}}</h3>
+</div>
+
+{% endblock %}
